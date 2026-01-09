@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { LayoutGrid, ChefHat, MonitorDot, ShieldCheck } from 'lucide-react';
-import { AppView } from '../types';
+import { AppView } from '../types.ts';
 
 interface ViewSwitcherProps {
   currentView: AppView;

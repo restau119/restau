@@ -1,13 +1,13 @@
 
 import React, { useState, useCallback } from 'react';
-import { AppView, Order, OrderItem, OrderStatus, DiningOption, EventType, PaymentMethod, MenuItem, Chef, EstateSettings, Modifier } from './types';
-import { ViewSwitcher } from './components/ViewSwitcher';
-import { CustomerView } from './components/CustomerView';
-import { KitchenView } from './components/KitchenView';
-import { PublicStatusView } from './components/PublicStatusView';
-import { AdminView } from './components/AdminView';
-import { StaffAccessGate } from './components/StaffAccessGate';
-import { MENU as INITIAL_MENU, CHEFS as INITIAL_CHEFS, ESTATE_CONTACT, MODIFIERS as INITIAL_MODIFIERS } from './constants';
+import { AppView, Order, OrderItem, OrderStatus, DiningOption, EventType, PaymentMethod, MenuItem, Chef, EstateSettings, Modifier } from './types.ts';
+import { ViewSwitcher } from './components/ViewSwitcher.tsx';
+import { CustomerView } from './components/CustomerView.tsx';
+import { KitchenView } from './components/KitchenView.tsx';
+import { PublicStatusView } from './components/PublicStatusView.tsx';
+import { AdminView } from './components/AdminView.tsx';
+import { StaffAccessGate } from './components/StaffAccessGate.tsx';
+import { MENU as INITIAL_MENU, CHEFS as INITIAL_CHEFS, ESTATE_CONTACT, MODIFIERS as INITIAL_MODIFIERS } from './constants.tsx';
 
 const INITIAL_ORDERS: Order[] = [
   {
