@@ -133,6 +133,7 @@ export default function App() {
           )
         )}
 
+        {/* Fixed missing onBack prop for public view StaffAccessGate */}
         {currentView === 'public' && (
           isStaffAuthenticated ? (
             <PublicStatusView orders={orders} />
@@ -145,13 +146,26 @@ export default function App() {
           )
         )}
 
+        {/* Fixed missing onBack prop and completed implementation for admin view */}
         {currentView === 'admin' && (
-          <AdminView 
-            menu={menu} setMenu={setMenu} 
-            chefs={chefs} setChefs={setChefs} 
-            settings={settings} setSettings={setSettings}
-            modifiers={modifiers} setModifiers={setModifiers}
-          />
+          isStaffAuthenticated ? (
+            <AdminView 
+              menu={menu} 
+              setMenu={setMenu} 
+              chefs={chefs} 
+              setChefs={setChefs} 
+              settings={settings} 
+              setSettings={setSettings}
+              modifiers={modifiers}
+              setModifiers={setModifiers}
+            />
+          ) : (
+            <StaffAccessGate 
+              viewName="Admin Hub" 
+              onAuthenticated={() => setIsStaffAuthenticated(true)} 
+              onBack={() => setCurrentView('customer')}
+            />
+          )
         )}
       </main>
     </div>

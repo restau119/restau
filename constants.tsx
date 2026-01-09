@@ -1,5 +1,5 @@
 
-import { MenuItem, Modifier, Chef, EventType, DiningOption } from './types.ts';
+import { MenuItem, Modifier, Chef, EventType, DiningOption } from './types';
 
 const ALL_MODES: DiningOption[] = ['eat-in', 'reservation', 'pickup', 'takeaway', 'delivery'];
 
@@ -110,6 +110,13 @@ export const GIFTS = [
   "Artisanal Coffee & Truffle Selection",
   "Private Kitchen Tour Invitation",
 ];
+
+export const COLORS = {
+  gold: '#D4AF37',
+  goldLight: '#F1D27B',
+  obsidian: '#0a0a0a',
+  cream: '#FDFCF0',
+};
 
 export const CURRENCY = 'FCFA';
 export const ESTATE_CONTACT = "+237 600 000 000";
